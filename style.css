@@ -1,5 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+img {
+  vertical-align: top;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 16px; /* по умолчанию */
+}
+body {
+  line-height: 1;
+  font-family: "Roboto";
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+/* --------------- */
+
 :root {
   --dark: #666;
   --primery: #bdc9d9;
@@ -321,13 +371,21 @@ section {
 }
 
 .slide__image {
+  display: flex;
+  flex: 0 0 453px;
+  width: 261px;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 img {
-  max-width: 450px;
+  max-width: 100%;
+  max-height: 556px;
+
+  /* max-width: 450px;
   max-height: 400px;
   border-radius: 7%;
-  object-fit: cover;
+  object-fit: cover; */
 }
 
 .dots-wrapper {
@@ -398,7 +456,11 @@ span:last-child {
     display: none;
   }
 }
-
+@media (max-width: 840.98px) {
+  .slide__image {
+    flex: 0 0 353px;
+  }
+}
 @media (max-width: 767.98px) {
   .description {
     flex-wrap: wrap;
@@ -421,9 +483,8 @@ span:last-child {
     row-gap: 15px;
   }
 
-  .slide__image img {
-    max-width: 100%;
-    max-height: 100%;
+  .slide__image {
+    width: 369px;
   }
 
   .description__img {
@@ -447,6 +508,7 @@ span:last-child {
   .description__img {
   }
 }
+
 @media (max-width: 593.98px) {
   .header__title {
     font-size: 58px;
@@ -460,7 +522,16 @@ span:last-child {
   }
 }
 @media (max-width: 400.98px) {
+  .slide__image {
+    width: 290px;
+  }
+}
+@media (max-width: 400.98px) {
   .slide__block-title {
+    flex: 0 0 120px;
+    font-size: 14px;
+  }
+  .slide__block-text {
     font-size: 14px;
   }
 }
