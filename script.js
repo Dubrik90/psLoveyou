@@ -73,4 +73,4 @@ next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);
 
 
-const interval = setInterval(() => nextSlide(), 300000);
+const interval = setInterval(() => nextSlide(), 3000);
