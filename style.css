@@ -93,6 +93,7 @@ html {
   flex-direction: column;
   overflow: hidden;
   position: relative;
+  background-color: #ddd6d6;
   /*font-family: var(--fontFamily);*/
 }
 
@@ -105,7 +106,6 @@ html {
 
 section {
   padding: 10px 0;
-  background-color: #ddd6d6;
 }
 
 .header {
@@ -113,6 +113,7 @@ section {
   padding-top: 18vw;
   position: relative;
   z-index: 1;
+  margin-bottom: 10px;
 }
 
 .header:after,
@@ -200,7 +201,7 @@ section {
   height: 50px;
   border: 2px solid #fff;
   border-radius: 50px;
-  bottom: 40px;
+  bottom: 60px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -387,7 +388,7 @@ section {
 }
 
 .slide__image img {
-  width: 400px;
+  width: 432px;
   height: 556px;
   object-fit: cover;
 }
@@ -519,7 +520,12 @@ span:last-child {
 @media (max-width: 692.98px) {
   .slide {
     flex-direction: column;
+    width: 100%;
     row-gap: 20px;
+  }
+  .slide__blocks {
+    width: 100%;
+    align-self: flex-start;
   }
   .slide__image {
     justify-content: stretch;
