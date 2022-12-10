@@ -128,8 +128,11 @@ section {
 }
 .color__link {
   color: #000;
+  transition: color 0.3s ease 0s;
 }
-
+.color__link:hover {
+  color: rgb(138, 133, 133);
+}
 .header:before {
   background: url("img/background.webp") center top / cover;
 }
