@@ -103,18 +103,6 @@ html {
   padding: 0 15px;
 }
 
-[data-fullscreen] {
-  min-height: 100vh;
-}
-.touch [data-fullscreen] {
-  min-height: calc(var(--vh, 1vh) * 100);
-}
-@media (max-width: 47.99875em) {
-  .touch [data-fullscreen] {
-    transition: height 0.2s;
-  }
-}
-
 section {
   padding: 10px 0;
   background-color: #ddd6d6;
