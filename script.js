@@ -1,10 +1,6 @@
-"use strict"
 
-function addTouchClass() {
-	// Добавление класса _touch для HTML если браузер мобильный
-	if (isMobile.any()) document.documentElement.classList.add('touch');
-}
-addTouchClass()
+
+
 const prev = document.getElementById('btn-prev'),
     next = document.getElementById('btn-next'),
     slids = document.querySelectorAll('.slide'),
@@ -81,4 +77,9 @@ next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);
 
 
-const interval = setInterval(() => nextSlide(), 300000);
+const interval = setInterval(() => nextSlide(), 3000);
+const addTouchClass =() => {
+	// Добавление класса _touch для HTML если браузер мобильный
+	if (isMobile.any()) document.documentElement.classList.add('touch');
+}
+addTouchClass()
