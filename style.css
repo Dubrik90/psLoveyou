@@ -339,7 +339,7 @@ section {
 }
 
 .slide__blocks {
-  padding: 0 15px;
+  padding-left: 15px;
   display: flex;
   flex-direction: column;
   row-gap: 10px;
@@ -542,7 +542,6 @@ span:last-child {
 @media (max-width: 450.98px) {
   .header__title {
     font-size: 42px;
-    padding-top: 17%;
   }
 }
 @media (max-width: 450.98px) {
@@ -561,7 +560,7 @@ span:last-child {
 }
 @media (max-width: 450.98px) {
   .slide__title {
-    font-size: 28px;
+    font-size: 26px;
   }
   .slide__block-title {
     flex: 0 0 84px;
