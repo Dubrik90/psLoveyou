@@ -1,11 +1,9 @@
-
-
-
 const prev = document.getElementById('btn-prev'),
     next = document.getElementById('btn-next'),
     slids = document.querySelectorAll('.slide'),
-    dotWrapper = document.querySelector('.dots-wrapper');
-
+    dotWrapper = document.querySelector('.dots-wrapper'),
+    slid = document.querySelector('.slide__image');
+console.log(slid);
 
 let index = 0;
 let outPut = '';
@@ -51,8 +49,7 @@ const nextSlide = () => {
     } else {
         index++;
         prepareCurrentSlide(index);
-    }
-    ;
+    };
 }
 
 const prevSlide = () => {
@@ -62,8 +59,7 @@ const prevSlide = () => {
     } else {
         index--;
         prepareCurrentSlide(index);
-    }
-    ;
+    };
 }
 
 dots.forEach((item, indexDot) => {
@@ -78,4 +74,3 @@ prev.addEventListener('click', prevSlide);
 
 
 const interval = setInterval(() => nextSlide(), 3000);
-
